@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package attendance;
+
+message RecordRequest {
+  int32 studentID = 1;
+}
+
+message RecordResponse {
+  string statementMessage = 1;
+}
+
+service AttendanceService {
+  rpc AttendanceRecord (RecordRequest) returns (RecordResponse);
+}
